@@ -1,0 +1,16 @@
+{
+  "name": "ga-generator",
+  "version": "0.0.1",
+  "description": "A single page app to generate Google Analytics init script with custom paramtaters",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "atrotors/ga-generator",
+  "author": "",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
