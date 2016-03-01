@@ -1,0 +1,14 @@
+{
+  "name": "ga-generator",
+  "description": "A single page app to generate Google Analytics init script with custom paramtaters",
+  "main": "index.html",
+  "authors": [
+    "atrotors <dev@atrotors.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/atrotors/ga-generator",
+  "moduleType": [],
+  "dependencies": {
+    "normalize-css": "normalize.css#^3.0.3"
+  }
+}
