@@ -23,7 +23,7 @@ gulp.task('uglify-js', function() {
 });
 
 gulp.task('minify-css', function() {
-  var cssstream = gulp.src(['assets/css/*.css', 'bower_components/normalize-css/normalize.css']);
+  var cssstream = gulp.src(['bower_components/normalize-css/normalize.css', 'assets/css/*.css']);
   var sassstream = gulp.src('assets/sass/*.scss')
    .pipe(sass().on('error', sass.logError));
 
