@@ -36,8 +36,8 @@ gulp.task('minify-css', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch(['assets/js'], ['uglify-js']);
-  gulp.watch(['assets/css', 'assets/sass'], ['minify-css']);
+  gulp.watch(['assets/js/*.js'], ['uglify-js']);
+  gulp.watch(['assets/css/*.css', 'assets/sass/*.scss'], ['minify-css']);
 });
 
-gulp.task('default', ['watch', 'clean', 'uglify-js', 'minify-css']);
+gulp.task('default', ['clean', 'uglify-js', 'minify-css']);
