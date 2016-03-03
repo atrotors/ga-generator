@@ -1,8 +1,33 @@
 'use strict';
 window.addEventListener('load', function() {
-  var gacode = document.querySelector('#gacode');
-  gacode.textContent = getGASnippet('');
-  Prism.highlightElement(gacode);
+  var textElement = document.querySelector('#text');
+  change_code(textElement);
+  textElement.addEventListener('input', function(e) {
+    change_code(e.target)
+  });
+
+  function change_code(element) {
+    var text = element.value;
+    if (isogram(text)) {
+      // this is temperary and very ugly
+      element.style.borderColor = 'black';
+      var gacode = document.querySelector('#gacode');
+      gacode.textContent = getGASnippet(text);
+      Prism.highlightElement(gacode);
+    } else {
+      // this is temperary and very ugly
+      element.style.borderColor = 'red';
+    }
+  }
+
+  function isogram(text) {
+    for (var i = 0; i < text.length; i++) {
+      if ((text.match(new RegExp(text[i], 'g')) || []).length > 1) {
+        return false;
+      }
+    }
+    return true;
+  }
 
   function getGASnippet(param_list) {
     // html template with placeholders
